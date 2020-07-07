@@ -14,6 +14,8 @@ class SheltersController < ApplicationController
 
   def show
     @shelter = Shelter.find(params[:id])
+    
+    @shelter_reviews = ShelterReview.all
   end
 
   def edit
