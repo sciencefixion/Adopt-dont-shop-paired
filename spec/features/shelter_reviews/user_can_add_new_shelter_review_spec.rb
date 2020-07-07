@@ -13,7 +13,7 @@ RSpec.describe "new shelter review page" do
 
     click_on "Add New Shelter Review"
 
-    expect(current_path).to eq("/shelters/#{shelter.id}/new_review")
+    expect(current_path).to eq("/shelters/#{shelter.id}/shelter_reviews/new")
 
     fill_in "Title", with: title
     fill_in "Rating", with: rating
@@ -22,7 +22,8 @@ RSpec.describe "new shelter review page" do
 
     click_on "Create New Shelter Review"
 
-    expect(current_path).to eq("/shelters/#{shelter.id}")
+    expect(current_path).to eq("/shelters")
+    visit "/shelters/#{shelter.id}"
 
     expect(page).to have_content(title)
     expect(page).to have_content(rating)

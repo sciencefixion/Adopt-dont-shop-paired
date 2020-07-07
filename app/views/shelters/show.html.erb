@@ -17,7 +17,7 @@
     <li><%= link_to "See Available Pets", "/shelters/#{@shelter.id}/pets" %></li><br/>
     <li><%= link_to "Update Shelter Information", "/shelters/#{@shelter.id}/edit" %></li><br/>
     <li><%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></li><br/>
-    <li><%= link_to "Add New Shelter Review", "/shelters/#{@shelter.id}/new_review" %></li>
+    <li><%= link_to "Add New Shelter Review", "/shelters/#{@shelter.id}/shelter_reviews/new" %></li>
     <br>
   </ul>
 </div>
