@@ -7,15 +7,14 @@ class SheltersController < ApplicationController
   end
 
   def create
-    shelter = Shelter.create!(shelter_params)
-    shelter.save!
-    redirect_to '/shelters'
+    shelter = Shelter.create(shelter_params)
+    shelter.save
+    redirect_to "/shelters"
   end
 
   def show
     @shelter = Shelter.find(params[:id])
-
-    # @shelter_reviews = ShelterReview.find(params[:id])
+    @shelter_reviews = @shelter.shelter_reviews
   end
 
   def edit
@@ -43,6 +42,10 @@ class SheltersController < ApplicationController
   def pets
     @shelter = Shelter.find(params[:shelter_id])
     @pets = @shelter.pets
+  end
+
+  def new_review
+
   end
 
   private

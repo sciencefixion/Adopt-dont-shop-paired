@@ -5,14 +5,19 @@
   <br>
 
   <section>
-  <!-- @shelter_reviews.each do -->
-
+    <%= @shelter_reviews.each do |shelter_review| %>
+      <p>Title: <%= shelter_review.title %></p>
+      <p>Rating: <%= shelter_review.rating %> old</p>
+      <p>Content: <%= shelter_review.content %></p>
+      <p>Image: <%= shelter_review.image %></p>
+    <% end %>
   </section>
 
   <ul>
     <li><%= link_to "See Available Pets", "/shelters/#{@shelter.id}/pets" %></li><br/>
     <li><%= link_to "Update Shelter Information", "/shelters/#{@shelter.id}/edit" %></li><br/>
-    <li><%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></li>
+    <li><%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %></li><br/>
+    <li><%= link_to "Add New Shelter Review", "/shelters/#{@shelter.id}/shelter_reviews/new" %></li>
     <br>
   </ul>
 </div>
