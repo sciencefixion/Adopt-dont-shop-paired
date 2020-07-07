@@ -1,0 +1,3 @@
+class ShelterReview < ApplicationRecord
+
+end

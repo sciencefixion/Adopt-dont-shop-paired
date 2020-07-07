@@ -6,6 +6,6 @@
 <p>Shelter: <%= @pet.shelter.name %></p>
 <p>Adoption status: <%= "adoptable" if @pet.adoptable %></p>
 <ul>
-  <li><%= link_to "Update Pet", "/pets/#{@pet.id}", method: :delete %></li>
+  <li><%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %></li>
   <li><%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %></li>
 </ul>

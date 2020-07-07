@@ -3,6 +3,12 @@
   <p><%= @shelter.address %></p>
   <p><%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></p>
   <br>
+
+  <section>
+  <!-- @shelter_reviews.each do -->
+
+  </section>
+
   <ul>
     <li><%= link_to "See Available Pets", "/shelters/#{@shelter.id}/pets" %></li><br/>
     <li><%= link_to "Update Shelter Information", "/shelters/#{@shelter.id}/edit" %></li><br/>
