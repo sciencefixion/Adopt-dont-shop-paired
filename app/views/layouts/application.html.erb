@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adopt, Don't Shop!</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <header>
+      <h1>Adopt, Don't Shop!</h1>
+    </header>
+    <br>
+    <nav>
+      <ul>
+        <li><a href="/">Main Menu</a></li>
+        <li>|</li>
+        <li><a href="/shelters">View All Shelters</a></li>
+        <li>|</li>
+        <li><a href="/pets">View All Pets</a></li>
+        <li>|</li>
+        <li><a href="/shelters/new">Add a New Shelter</a></li>
+      </ul>
+    </nav>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <footer><b>Contact:</b><br/>
+  508-555-5555 | ads@e.mail</footer>
+</html>

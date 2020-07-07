@@ -1,0 +1,8 @@
+.shelter {
+  display: inline-block;
+  margin: 10px 10px;
+  overflow: hidden;
+  height: 200px;
+  width: 300px;
+  vertical-align: top;
+}

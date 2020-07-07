@@ -1,0 +1,21 @@
+<h1>Create a new pet</h1>
+<p>Please add the following information about the pet:</p>
+<br>
+<%= form_tag("/shelters/#{@shelter_id}/pets", method: :post) do %>
+  <%= label_tag :image %><br/>
+  <%= text_field_tag :image %><br/>
+  <br>
+  <%= label_tag :name %><br/>
+  <%= text_field_tag :name %><br/>
+  <br>
+  <%= label_tag :description %><br/>
+  <%= text_field_tag :description %><br/>
+  <br>
+  <%= label_tag :age %><br/>
+  <%= text_field_tag :age %><br/>
+  <br>
+  <%= label_tag :sex %><br/>
+  <%= text_field_tag :sex %><br/>
+  <br>
+  <%= submit_tag "Create Pet" %>
+<% end %>

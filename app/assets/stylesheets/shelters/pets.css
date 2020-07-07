@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  color: black;
+  padding: 5px;
+  background-color: white;
+}
+
+nav li {
+  display: inline;
+  padding: 5px;
+}
+
+.pet {
+  display: inline-block;
+  margin: 10px 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 250px;
+  vertical-align: top;
+}
+
+.pet img {
+  text-align: center;
+  height: 175px;
+  width: 250px;
+}
+
+.pet h3 {
+  text-align: center
+}
+
+.pet p {
+  margin-left: 20px;
+  margin-right: 10px;
+}
