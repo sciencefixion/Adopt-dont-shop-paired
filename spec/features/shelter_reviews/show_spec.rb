@@ -15,7 +15,6 @@ RSpec.describe "Shelter Reviews" do
 
     visit "/shelters/#{shelter_1.id}"
 
-
     expect(page).to have_content(review_1.title)
     expect(page).to have_content(review_2.rating)
     expect(page).to have_content(review_3.content)
