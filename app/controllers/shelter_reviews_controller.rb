@@ -22,7 +22,7 @@ class ShelterReviewsController < ApplicationController
     @shelter_review = ShelterReview.find(params[:id])
     @shelter = Shelter.find(@shelter_review.shelter_id)
     @shelter_review.update(shelter_review_params)
-    # redirect_to "/shelters/#{@shelter.id}"
+    # # redirect_to "/shelters/#{@shelter.id}"
   end
 
   def update

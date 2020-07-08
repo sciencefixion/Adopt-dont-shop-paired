@@ -2,7 +2,7 @@
 <br>
 <%= form_tag "/shelters/#{@shelter.id}/shelter_reviews", method: :patch do %>
   <%= label_tag :title %><br/>
-  <%= text_field_tag "title", "Superb Owl!" %><br/>
+  <%= text_field_tag "title", "#{@shelter_review.title}" %><br/>
   <!-- As you can see above, I tried to hard code the value we're expecting in the test into the form as a prefilled value, but the test is still failing to find the information we want. -->
   <br>
   <%= label_tag :rating %><br/>
