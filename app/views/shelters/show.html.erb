@@ -5,7 +5,7 @@
   <br>
 
   <div>
-    <%= @shelter_reviews.each do |shelter_review| %>
+    <% @shelter_reviews.each do |shelter_review| %>
       <p>Title: <%= shelter_review.title %></p>
       <p>Rating: <%= shelter_review.rating %></p>
       <p>Content: <%= shelter_review.content %></p>
