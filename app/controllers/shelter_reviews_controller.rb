@@ -26,7 +26,12 @@ class ShelterReviewsController < ApplicationController
   def update
     @shelter_review = ShelterReview.find(params[:id])
     @shelter_review.update(shelter_review_params)
-    redirect_to "/shelters/#{@shelter_review.shelter_id}/"
+    if @shelter_review.valid?
+      redirect_to "/shelters/#{@shelter_review.shelter_id}/"
+    else
+      flash[:notice] = "Shelter Review Not Updated! Required Content Missing."
+      render :edit
+    end
   end
 
   private
