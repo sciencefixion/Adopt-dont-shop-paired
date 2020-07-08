@@ -1,6 +1,6 @@
 <h1>Create a new shelter review</h1>
 <br>
-<%= form_tag("/shelters/#{@shelter_id}", method: :post) do %>
+<%= form_tag("/shelters/#{@shelter_id}/shelter_reviews", method: :post) do %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <br>
   <%= label_tag :title %><br/>
