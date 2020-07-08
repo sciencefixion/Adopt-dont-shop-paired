@@ -21,13 +21,18 @@ class ShelterReviewsController < ApplicationController
   def edit
     @shelter_review = ShelterReview.find(params[:id])
     @shelter = Shelter.find(@shelter_review.shelter_id)
-    @shelter_review.update(shelter_review_params)
-    # redirect_to "/shelters/#{@shelter.id}"
   end
 
-  # def update
-  #
-  # end
+  def update
+    @shelter_review = ShelterReview.find(params[:id])
+    @shelter_review.update(shelter_review_params)
+    if @shelter_review.valid?
+      redirect_to "/shelters/#{@shelter_review.shelter_id}/"
+    else
+      flash[:notice] = "Shelter Review Not Updated! Required Content Missing."
+      render :edit
+    end
+  end
 
   private
   def shelter_review_params
