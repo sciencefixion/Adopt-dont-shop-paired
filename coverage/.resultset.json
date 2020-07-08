@@ -215,6 +215,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null
         ]
       },
@@ -224,7 +226,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_delete_a_pet_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -252,38 +254,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_see_a_pet_by_id_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_see_all_pets_in_a_shelter_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/index_shelter_pets_spec.rb": {
         "lines": [
           1,
           null,
@@ -327,7 +298,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_see_pets_index_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -356,7 +327,38 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_update_a_pet_from_index_page_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/update_from_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -391,7 +393,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/user_can_update_a_pet_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/update_spec.rb": {
         "lines": [
           1,
           null,
@@ -425,7 +427,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/new_flash_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/edit_spec.rb": {
         "lines": [
           1,
           null,
@@ -440,6 +442,104 @@
           null,
           1,
           1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          1,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -473,7 +573,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/user_can_add_new_shelter_review_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/destroy_from_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -481,63 +581,9 @@
           1,
           1,
           null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_create_a_new_shelter_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           1,
           null,
@@ -546,7 +592,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_delete_a_shelter_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -575,7 +621,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_delete_shelter_from_index_page_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/edit_from_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -594,26 +640,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_edit_shelter_from_index_page_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_see_shelter_index_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -638,7 +665,30 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_see_shelter_info_by_name_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/show_spec.rb": {
         "lines": [
           1,
           null,
@@ -667,7 +717,7 @@
           null
         ]
       },
-      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/user_can_update_a_shelter_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/update_spec.rb": {
         "lines": [
           1,
           null,
@@ -918,12 +968,24 @@
           null,
           1,
           1,
+
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
           2,
           null,
           null
         ]
       }
     },
-    "timestamp": 1594159708
+    "timestamp": 1594189674
   }
 }

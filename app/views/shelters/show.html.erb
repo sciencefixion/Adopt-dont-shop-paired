@@ -4,14 +4,16 @@
   <p><%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></p>
   <br>
 
-  <section>
+  <div>
     <%= @shelter_reviews.each do |shelter_review| %>
       <p>Title: <%= shelter_review.title %></p>
-      <p>Rating: <%= shelter_review.rating %> old</p>
+      <p>Rating: <%= shelter_review.rating %></p>
       <p>Content: <%= shelter_review.content %></p>
-      <p>Image: <%= shelter_review.image %></p>
+      <p>Image: <img src="<%= shelter_review.image %>" style="width: 55vw; min-width: 330px;" ></p>
+      <p><%= link_to "Edit #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}/edit" %></p>
     <% end %>
-  </section>
+
+  </div>
 
   <ul>
     <li><%= link_to "See Available Pets", "/shelters/#{@shelter.id}/pets" %></li><br/>
