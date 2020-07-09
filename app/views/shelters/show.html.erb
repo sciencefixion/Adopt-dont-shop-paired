@@ -1,21 +1,11 @@
-<h1><%= @shelter.name %></h1>
-<div class="shelter"
+<div class="title">
+  <h1><%= @shelter.name %></h1>
   <p><%= @shelter.address %></p>
   <p><%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></p>
+</div>
+<br>
+<div class="links"
   <br>
-
-  <div>
-    <% @shelter_reviews.each do |shelter_review| %>
-      <p>Title: <%= shelter_review.title %></p>
-      <p>Rating: <%= shelter_review.rating %></p>
-      <p>Content: <%= shelter_review.content %></p>
-      <p>Image: <img src="<%= shelter_review.image %>" style="width: 55vw; min-width: 330px;" ></p>
-      <p><%= link_to "Edit #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}/edit" %></p>
-      <p><%= link_to "Delete #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}", method: :delete %></p>
-    <% end %>
-
-  </div>
-
   <ul>
     <li><%= link_to "See Available Pets", "/shelters/#{@shelter.id}/pets" %></li><br/>
     <li><%= link_to "Update Shelter Information", "/shelters/#{@shelter.id}/edit" %></li><br/>
@@ -24,3 +14,15 @@
     <br>
   </ul>
 </div>
+
+<h2><center>Shelter Reviews</center></h2>
+<% @shelter_reviews.each do |shelter_review| %>
+  <div class="review">
+    <p><b><center><%= shelter_review.title %></center></b></p>
+    <p><b>Rating:</b> <%= shelter_review.rating %></p>
+    <p><b>Content:</b> <%= shelter_review.content %></p>
+    <p><b>Image:</b> <img src="<%= shelter_review.image %>" style="width: 55vw; min-width: 330px;" ></p>
+    <p><%= link_to "Edit #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}/edit" %></p>
+    <p><%= link_to "Delete #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}", method: :delete %></p>
+  </div>
+<% end %>

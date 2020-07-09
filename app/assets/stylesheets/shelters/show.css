@@ -1,4 +1,38 @@
-.shelter {
+.title {
+  background-color: lightblue;
+  text-align: center;
+  margin: auto;
+  border: 2px solid midnightblue;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.title p {
   text-align: center;
   height: 100%;
+}
+
+.links {
+  margin: auto;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.links li {
+  align-content: center;
+}
+
+.review {
+  background-color: lightblue;
+  border-color: midnightblue;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 250px;
+  vertical-align: top;
+  padding: 10px;
 }

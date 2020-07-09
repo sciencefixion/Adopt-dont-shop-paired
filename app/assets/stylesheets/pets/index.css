@@ -7,12 +7,12 @@ h4 {
 }
 
 .pet {
-    display: inline-block;
-    margin: 10px 10px;
-    overflow: hidden;
-    height: 100%;
-    width: 250px;
-    vertical-align: top;
+  display: inline-block;
+  margin: 10px 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 250px;
+  vertical-align: top;
 }
 
 .pet img {
