@@ -20,7 +20,7 @@
         <li>|</li>
         <li><a href="/shelters/new">Add a New Shelter</a></li>
         <li>|</li>
-        <li>Favorite Pets: <%= @favorites.total_count %></li>
+        <li><%= link_to "Favorite Pets: #{session[:counter]}", "/favorites"%></li>
       </ul>
     </nav>
 

@@ -229,22 +229,33 @@
           null
         ]
       },
+      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/favorite.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/models/pet_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -270,13 +281,13 @@
           null,
           1,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -295,16 +306,16 @@
           null,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          1,
-          1,
+          2,
+          2,
           null,
           null
         ]
@@ -319,6 +330,6 @@
         ]
       }
     },
-    "timestamp": 1594264764
+    "timestamp": 1594299085
   }
 }
