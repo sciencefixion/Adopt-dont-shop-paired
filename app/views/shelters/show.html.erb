@@ -15,14 +15,16 @@
   </ul>
 </div>
 
+<hr>
 <h2><center>Shelter Reviews</center></h2>
 <% @shelter_reviews.each do |shelter_review| %>
   <div class="review">
-    <p><b><center><%= shelter_review.title %></center></b></p>
+    <h3><center><%= shelter_review.title %></center></h3>
     <p><b>Rating:</b> <%= shelter_review.rating %></p>
     <p><b>Content:</b> <%= shelter_review.content %></p>
     <p><b>Image:</b> <img src="<%= shelter_review.image %>" style="width: 55vw; min-width: 330px;" ></p>
     <p><%= link_to "Edit #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}/edit" %></p>
     <p><%= link_to "Delete #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}", method: :delete %></p>
+    <hr>
   </div>
 <% end %>

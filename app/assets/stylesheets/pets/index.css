@@ -1,9 +1,10 @@
-h1 {
+.info {
+  background-color: lightblue;
   text-align: center;
-}
-
-h4 {
-  text-align: center;
+  margin: auto;
+  border: 2px solid midnightblue;
+  border-radius: 5px;
+  width: 30%;
 }
 
 .pet {

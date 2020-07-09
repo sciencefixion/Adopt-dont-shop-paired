@@ -23,16 +23,17 @@
 }
 
 .review {
-  background-color: lightblue;
-  border-color: midnightblue;
-  border-style: solid;
-  border-width: medium;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 10px 10px;
+  margin: auto;
   overflow: hidden;
   height: 100%;
-  width: 250px;
+  width: 75%;
   vertical-align: top;
   padding: 10px;
+}
+
+.review img {
+  margin: auto;
+  width: 200px;
+  max-width:100%;
+  max-height:100%;
 }
