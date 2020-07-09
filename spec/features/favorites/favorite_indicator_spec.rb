@@ -17,7 +17,7 @@ RSpec.describe 'favorite pet indicator' do
 
     visit '/pets'
 
-    expect(page).to have_content("Favorite Pets: 0")
+    expect(page).to have_content("Favorite Pets:")
 
     click_on 'Maggie'
     click_on 'Add Pet to Favorites'
