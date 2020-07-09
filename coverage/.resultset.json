@@ -255,6 +255,17 @@
           null
         ]
       },
+      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/favorite_indicator_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/index_shelter_pets_spec.rb": {
         "lines": [
           1,
@@ -1047,6 +1058,6 @@
         ]
       }
     },
-    "timestamp": 1594254251
+    "timestamp": 1594258865
   }
 }
