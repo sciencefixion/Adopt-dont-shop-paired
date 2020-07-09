@@ -1,18 +1,19 @@
-h1 {
+.info {
+  background-color: lightblue;
   text-align: center;
-}
-
-h4 {
-  text-align: center;
+  margin: auto;
+  border: 2px solid midnightblue;
+  border-radius: 5px;
+  width: 30%;
 }
 
 .pet {
-    display: inline-block;
-    margin: 10px 10px;
-    overflow: hidden;
-    height: 100%;
-    width: 250px;
-    vertical-align: top;
+  display: inline-block;
+  margin: 10px 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 250px;
+  vertical-align: top;
 }
 
 .pet img {

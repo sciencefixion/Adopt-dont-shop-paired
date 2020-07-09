@@ -1,6 +1,7 @@
-<h1>All Pets</h1>
-<h4>Total Number of Pets: <%= @pets.count %></h4>
-
+<div class="info"
+  <h1>All Pets</h1>
+  <h4>Total Number of Pets: <%= @pets.count %></h4>
+</div>
 <% @pets.each do |pet| %>
   <div class="pet">
     <img src=<%= pet.image %> alt=<%= pet.name %></img>
