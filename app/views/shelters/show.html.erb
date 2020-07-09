@@ -11,6 +11,7 @@
       <p>Content: <%= shelter_review.content %></p>
       <p>Image: <img src="<%= shelter_review.image %>" style="width: 55vw; min-width: 330px;" ></p>
       <p><%= link_to "Edit #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}/edit" %></p>
+      <p><%= link_to "Delete #{shelter_review.title}", "/shelters/#{@shelter.id}/shelter_reviews/#{shelter_review.id}", method: :delete %></p>
     <% end %>
 
   </div>

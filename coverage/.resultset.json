@@ -217,6 +217,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -423,6 +424,30 @@
           null,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/destroy_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -876,8 +901,8 @@
           null,
           null,
           1,
-          11,
-          11,
+          12,
+          12,
           null,
           null,
           1,
@@ -1015,6 +1040,6 @@
         ]
       }
     },
-    "timestamp": 1594217340
+    "timestamp": 1594253978
   }
 }
