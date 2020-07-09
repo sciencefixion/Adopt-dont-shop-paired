@@ -15,15 +15,14 @@ RSpec.describe 'favorite pet indicator' do
                      sex: 'female',
                      shelter: shelter)
 
-    visit '/'
+    visit '/pets'
 
     expect(page).to have_content("Favorite Pets: 0")
-
-    visit '/pets'
 
     click_on 'Maggie'
     click_on 'Add Pet to Favorites'
 
+    expect(page).to have_content("You added #{pet.name} to your favorites!")
     expect(page).to have_content("Favorite Pets: 1")
   end
 end

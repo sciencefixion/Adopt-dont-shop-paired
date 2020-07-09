@@ -19,6 +19,8 @@
         <li><a href="/pets">View All Pets</a></li>
         <li>|</li>
         <li><a href="/shelters/new">Add a New Shelter</a></li>
+        <li>|</li>
+        <li>Favorite Pets: <%= @favorites.total_count %></li>
       </ul>
     </nav>
 
@@ -28,7 +30,7 @@
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
-    
+
     <%= yield %>
   </body>
 
