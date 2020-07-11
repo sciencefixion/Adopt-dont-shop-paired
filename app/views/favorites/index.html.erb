@@ -1,9 +1,15 @@
 <h1>Favorite Pets</h1>
-
-<% @favorites.each do |favorite_id, favorite_count| %>
+<% if @favorites.nil? || @favorites.empty? %>
+  <p> You have no favorited pets. </p>
+<% else %>
+  <% @favorites.each do |favorite_id, favorite_count| %>
   <div class="pet">
     <% pet = Pet.find(favorite_id.to_i) %>
     <img src=<%= pet.image %> alt=<%= pet.name %></img>
     <h3><a href="/pets/<%= pet.id %>/"><%= pet.name %></a></h3>
+  </div>
+  <% end %>
+  <div class="remove-all">
+    <%= link_to "Remove All Favorited Pets", "/favorites", method: :delete %>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-class Favorite
+class Favorites < ApplicationRecord
   attr_reader :contents
 
   def initialize(initial_contents)

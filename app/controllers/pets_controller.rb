@@ -21,6 +21,17 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     @favorites = session[:favorite_pets]
+
+    @link_title = ''
+    @link_method = ''
+     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
+
+       @link_title = "Add Pet to Favorites"
+       @link_method = :patch
+     else
+       @link_title = "Remove Pet from Favorites"
+       @link_method = :delete
+     end
   end
 
   def update

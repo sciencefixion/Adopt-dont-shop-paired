@@ -20,7 +20,7 @@
         <li>|</li>
         <li><a href="/shelters/new">Add a New Shelter</a></li>
         <li>|</li>
-        <% favorites_counter = Favorite.new(session[:favorite_pets]) %>
+        <% favorites_counter = Favorites.new(session[:favorite_pets]) %>
         <li><%= link_to "Favorite Pets: #{favorites_counter.total_count}", "/favorites"%></li>
       </ul>
     </nav>
