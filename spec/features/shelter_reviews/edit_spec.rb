@@ -15,11 +15,13 @@ RSpec.describe "Edit Shelter Review" do
       click_on "Edit #{review_1.title}"
 
       expect(current_path).to eq("/shelters/#{shelter.id}/shelter_reviews/#{review_1.id}/edit")
-      # save_and_open_page
-      # expect().to have_content(review_1.title)
-      expect(page).to have_content(review_1.rating)
-      expect(page).to have_content(review_1.content)
-      # expect(page).to have_content(review_1.image)
+
+      within("form") do
+        page.has_content?("Superb Owl!")
+        page.has_content?(review_1.rating)
+        page.has_content?(review_1.content)
+        # expect(page).to have_content(review_1.image)
+      end
 
       title = "Title"
       rating = 4
@@ -33,7 +35,7 @@ RSpec.describe "Edit Shelter Review" do
 
       click_on "Update Shelter Review"
 
-      expect(current_path).to eq("/shelters/#{shelter.id}")
+      expect(current_path).to eq("/shelters/#{shelter.id}/")
 
       expect(page).to have_content(title)
       expect(page).to have_content(rating)
