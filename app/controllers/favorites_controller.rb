@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
   def index
     @favorites = session[:favorite_pets]
-
   end
 
   def update
@@ -14,4 +13,10 @@ class FavoritesController < ApplicationController
     redirect_to '/pets'
   end
 
+  def destroy
+    pet = Pet.find(params[:pet_id])
+    session[:favorite_pets].delete(pet.id.to_s)
+    flash[:notice] = "You removed #{pet.name} to your favorites!"
+    redirect_to '/favorites'
+  end
 end

@@ -20,6 +20,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @favorites = session[:favorite_pets]
   end
 
   def update
