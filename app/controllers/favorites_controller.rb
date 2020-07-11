@@ -21,7 +21,8 @@ class FavoritesController < ApplicationController
   end
 
   def destroy_all
-    binding.pry
-    @favorites.destroy_all
+    favorite = Favorite.new(session[:favorite_pets])
+    favorite.contents.clear
+    redirect_to "/favorites"
   end
 end
