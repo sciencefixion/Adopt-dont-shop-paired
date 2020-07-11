@@ -6,16 +6,7 @@
 <p>Shelter: <%= @pet.shelter.name %></p>
 <p>Adoption status: <%= "adoptable" if @pet.adoptable %></p>
 <ul>
-  <% link_title = '' %>
-  <% link_method = '' %>
-  <% if @favorites.keys.include?(@pet.id.to_s) %>
-    <% link_title = "Remove Pet from Favorites" %>
-    <% link_method = :delete %>
-  <% else %>
-    <% link_title = "Add Pet to Favorites"%>
-    <% link_method = :patch %>
-  <% end %>
-  <li><%= link_to "#{link_title}", "/favorites/#{@pet.id}", method: link_method %></li>
+  <li><%= link_to "#{@link_title}", "/favorites/#{@pet.id}", method: @link_method %></li>
   <li><%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %></li>
   <li><%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %></li>
 </ul>
