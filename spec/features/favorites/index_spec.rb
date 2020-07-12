@@ -59,37 +59,4 @@ RSpec.describe "Favorites index page" do
     expect(page).to have_content("You have no favorited pets.")
     expect(page).to have_content("Favorite Pets: 0")
   end
-
-  it 'can apply to adopt pets from the favorites list' do
-    visit '/pets'
-    click_on "Maggie"
-    click_on "Add Pet to Favorites"
-    click_on "Shaggie"
-    click_on "Add Pet to Favorites"
-
-    visit '/favorites'
-
-    expect(page).to have_content("Apply to Adopt Pet(s)")
-    click_on "Apply to Adopt Pet(s)"
-
-    expect(current_path).to eq('/favorites/adoption_app')
-    expect(page).to have_content("Apply to Adopt Pet(s)")
-    expect(page).to have_content("Please select the pet(s) you are applying to adopt")
-    expect(page).to have_content(@pet_1.name)
-    expect(page).to have_content(@pet_2.name)
-    expect(page).to have_content("Name")
-    expect(page).to have_content("Address")
-    expect(page).to have_content("City")
-    expect(page).to have_content("State")
-    expect(page).to have_content("Zip")
-    expect(page).to have_content("Phone number")
-    expect(page).to have_button("Submit Adoption Application")
-
-    click_button "Submit Adoption Application"
-
-    expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
-    expect(current_path).to eq("/favorites")
-    expect(page).to_not have_content(@pet_1.name)
-    expect(page).to_not have_content(@pet_2.name)
-  end
 end
