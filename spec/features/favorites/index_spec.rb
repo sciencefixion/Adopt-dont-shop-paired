@@ -40,7 +40,7 @@ RSpec.describe "Favorites index page" do
 
     expect(page).to have_content("You have no favorited pets.")
   end
-  it "allows " do
+  it "allows user to remove all favorited pets" do
     visit '/pets'
 
     click_on "Maggie"
