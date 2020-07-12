@@ -7,13 +7,13 @@ class ApplicationsController < ApplicationController
 
   def create
     application = Application.create(application_params)
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     flash[:notice] = "Your application was received. Thank you for applying to adopt. We will be in touch shortly."
     redirect_to "/favorites"
   end
 
   private
   def application_params
-    params.permit(:pet_ids, :name, :address, :city, :state, :zip, :phone_number, :description)
+    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description)
   end
 end

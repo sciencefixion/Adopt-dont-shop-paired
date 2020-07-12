@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Favorites index page" do
+RSpec.describe "Applications index page" do
   before(:each) do
     @shelter = Shelter.create!(name: 'Old Dog Haven',
       address: '166 Main St',
@@ -19,7 +19,9 @@ RSpec.describe "Favorites index page" do
       age: '3 years',
       sex: 'male',
       shelter: @shelter)
-    end
+    @application = Application.create!(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
+    PetApplication.create!(@pet_1.id, @application.id)
+  end
 
   it 'can apply to adopt pets from the favorites list' do
     visit '/pets'
