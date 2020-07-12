@@ -9,6 +9,9 @@
     <h3><a href="/pets/<%= pet.id %>/"><%= pet.name %></a></h3>
   </div>
   <% end %>
+  <div class="adopt-app">
+    <%= link_to "Apply to Adopt Pet(s)", "/applications/new" %>
+  </div>
   <div class="remove-all">
     <%= link_to "Remove All Favorited Pets", "/favorites", method: :delete %>
   </div>

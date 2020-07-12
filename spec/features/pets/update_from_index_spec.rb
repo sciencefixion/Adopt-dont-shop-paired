@@ -10,7 +10,6 @@ RSpec.describe 'update pet from index page', type: :feature do
 
     pet = Pet.create!(image: 'pic 2',
                      name: 'Maggie',
-                     description: 'A thoughtful sentient being',
                      age: '2 years',
                      sex: 'female',
                      shelter: shelter,
