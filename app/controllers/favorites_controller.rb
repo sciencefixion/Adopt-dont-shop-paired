@@ -1,6 +1,8 @@
 class FavoritesController < ApplicationController
   def index
     @favorites = session[:favorite_pets]
+    applied_for = ApplicationPet.all
+    @applied_list = applied_for.map {|pet| Pet.find(pet[:pet_id])}
   end
 
   def update
