@@ -1,18 +1,24 @@
 class ApplicationsController < ApplicationController
   def new
     @favorites = Favorite.new(session[:favorite_pets])
-    pet_ids = @favorites.contents.keys.map {|id| id.to_i }
-    @pets = pet_ids.map { |id| Pet.find(id) }
+    @pet_ids = @favorites.contents.keys.map {|id| id.to_i }
+    @pets = @pet_ids.map { |id| Pet.find(id) }
   end
 
   def create
     application = Application.create(application_params)
-    params[:pet_ids].each do |pet_id|
-      ApplicationPet.create(pet: Pet.find(pet_id), application: application)
-      session[:favorite_pets].delete(pet_id.to_s)
+    if application.valid?
+      params[:pet_ids].each do |pet_id|
+        ApplicationPet.create(pet: Pet.find(pet_id), application: application)
+        session[:favorite_pets].delete(pet_id.to_s)
+      end
+      flash[:notice] = "Your application was received. Thank you for applying to adopt. We will be in touch shortly."
+      redirect_to '/favorites'
+    else
+      flash[:notice] = "Application Incomplete! The form must be completed to submit an application."
+      @pets = session[:favorite_pets]
+      redirect_to '/applications/new'
     end
-    flash[:notice] = "Your application was received. Thank you for applying to adopt. We will be in touch shortly."
-    redirect_to "/favorites"
   end
 
   private
