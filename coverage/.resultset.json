@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/environment.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/application.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/application.rb": {
         "lines": [
           1,
           null,
@@ -32,14 +32,14 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/boot.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/boot.rb": {
         "lines": [
           1,
           null,
           1
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/environments/test.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -85,7 +85,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/application_controller_renderer.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -97,7 +97,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/assets.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -115,7 +115,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/backtrace_silencers.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -126,7 +126,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/cookies_serializer.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -135,7 +135,7 @@
           1
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/filter_parameter_logging.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -143,7 +143,7 @@
           1
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/inflections.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -163,7 +163,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/mime_types.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -171,7 +171,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/initializers/wrap_parameters.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -189,7 +189,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/config/routes.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -225,77 +225,17 @@
           1,
           null,
           1,
+          1,
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/helpers/application_helper.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/favorites/cant_favorite_more_than_once_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/favorites/favorite_indicator_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/favorites/cant_favorite_more_than_once_spec.rb": {
         "lines": [
           1,
           null,
@@ -317,6 +257,67 @@
           1,
           null,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/favorites/favorite_indicator_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
           null,
           1,
           1,
@@ -327,7 +328,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/favorites/index_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/favorites/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -393,7 +394,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/create_shelter_pet_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/create_shelter_pet_spec.rb": {
         "lines": [
           1,
           null,
@@ -437,7 +438,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/destroy_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -465,7 +466,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/index_shelter_pets_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/index_shelter_pets_spec.rb": {
         "lines": [
           1,
           null,
@@ -509,7 +510,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/index_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -538,7 +539,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/show_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/show_spec.rb": {
         "lines": [
           1,
           null,
@@ -569,41 +570,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/update_from_index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/pets/update_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/update_from_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -637,7 +604,41 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/destroy_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/pets/update_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -661,7 +662,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/edit_flash_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/edit_flash_spec.rb": {
         "lines": [
           1,
           null,
@@ -687,7 +688,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/edit_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/edit_spec.rb": {
         "lines": [
           1,
           null,
@@ -737,7 +738,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/new_flash_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/new_flash_spec.rb": {
         "lines": [
           1,
           null,
@@ -757,7 +758,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/new_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/new_spec.rb": {
         "lines": [
           1,
           null,
@@ -807,7 +808,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelter_reviews/show_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelter_reviews/show_spec.rb": {
         "lines": [
           1,
           null,
@@ -835,7 +836,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/destroy_from_index_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/destroy_from_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -854,103 +855,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/destroy_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/edit_from_index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/new_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/show_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/destroy_spec.rb": {
         "lines": [
           1,
           null,
@@ -971,6 +876,102 @@
           1,
           null,
           1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/edit_from_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
           1,
           1,
           1,
@@ -979,7 +980,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/features/shelters/update_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/features/shelters/update_spec.rb": {
         "lines": [
           1,
           null,
@@ -1006,7 +1007,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/models/pet_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/models/pet_spec.rb": {
         "lines": [
           1,
           null,
@@ -1015,38 +1016,6 @@
           2,
           2,
           2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/pet.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/models/shelter_review_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
           2,
           2,
           2,
@@ -1058,7 +1027,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/shelter_review.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/models/pet.rb": {
         "lines": [
           1,
           1,
@@ -1066,7 +1035,39 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/spec/models/shelter_spec.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/models/shelter_review_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/models/shelter_review.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/spec/models/shelter_spec.rb": {
         "lines": [
           1,
           null,
@@ -1086,7 +1087,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/shelter.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/models/shelter.rb": {
         "lines": [
           1,
           1,
@@ -1095,7 +1096,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/pets_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/pets_controller.rb": {
         "lines": [
           1,
           1,
@@ -1151,14 +1152,14 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/application_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/favorite.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/models/favorite.rb": {
         "lines": [
           1,
           1,
@@ -1174,7 +1175,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/favorites_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/favorites_controller.rb": {
         "lines": [
           1,
           1,
@@ -1206,16 +1207,18 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/applications_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/applications_controller.rb": {
         "lines": [
           1,
           1,
           1,
+          3,
+          3,
           null,
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/shelters_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/shelters_controller.rb": {
         "lines": [
           1,
           1,
@@ -1274,7 +1277,7 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/controllers/shelter_reviews_controller.rb": {
+      "/Users/unit01/turing/2module/projects/2nd/adopt-dont-shop-app/app/controllers/shelter_reviews_controller.rb": {
         "lines": [
           1,
           1,
@@ -1327,6 +1330,6 @@
         ]
       }
     },
-    "timestamp": 1594512886
+    "timestamp": 1594516083
   }
 }
