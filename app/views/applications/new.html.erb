@@ -1,13 +1,14 @@
 <h1>Apply to Adopt Pet(s)</h1>
 <h3>Please select the pet(s) you are applying to adopt</h3>
 
-<% @pets.each do |pet| %>
-  <%= check_box_tag 'pet.name', 'accept', false %>
-  <label for="pet.name"> <%= "#{pet.name}" %></label><br>
-<% end %>
-
 <div class="application">
   <%= form_tag("/applications", method: :post) do %>
+    <% @pets.each do |pet| %>
+      <%= check_box_tag 'pet_ids[]', pet.id -%>
+      <%= h pet.name -%>
+    <% end %>
+    <br>
+    <br>
     <%= label_tag :name %><br/>
     <%= text_field_tag :name %><br/>
     <br>
