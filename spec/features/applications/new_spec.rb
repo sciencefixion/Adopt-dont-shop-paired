@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Applications index page" do
+RSpec.describe "New Applications page" do
   before(:each) do
     @shelter = Shelter.create!(name: 'Old Dog Haven',
       address: '166 Main St',
@@ -56,5 +56,40 @@ RSpec.describe "Applications index page" do
     expect(current_path).to eq("/favorites")
 
     expect(page).to_not have_content(@pet_1.name)
+  end
+  describe "Incomplete application for a Pet" do
+    it "will not allow an incomplete application" do
+      # When I apply for a pet and fail to fill out any of the following:
+      # - Name
+      # - Address
+      # - City
+      # - State
+      # - Zip
+      # - Phone Number
+      # - Description of why I'd make a good home for this/these pet(s)
+      # And I click on a button to submit my application
+      # I'm redirect back to the new application form to complete the necessary fields
+      # And I see a flash message indicating that I must complete the form in order to submit the application
+      visit '/pets'
+      click_on "Maggie"
+      click_on "Add Pet to Favorites"
+      click_on "Shaggie"
+      click_on "Add Pet to Favorites"
+
+      visit '/favorites'
+
+      click_on "Apply to Adopt Pet(s)"
+
+      check("pet_ids[]", match: :first)
+
+      #if application is not successfully created
+
+      click_on("Submit Adoption Application")
+
+      expect(current_path).to eq("/applications/new")
+
+      expect(page).to have_content("Application Incomplete! The form must be completed to submit an application.")
+
+    end
   end
 end
