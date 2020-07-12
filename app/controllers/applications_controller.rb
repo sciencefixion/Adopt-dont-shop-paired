@@ -7,7 +7,6 @@ class ApplicationsController < ApplicationController
 
   def create
     application = Application.create(application_params)
-    require "pry"; binding.pry
     flash[:notice] = "Your application was received. Thank you for applying to adopt. We will be in touch shortly."
     redirect_to "/favorites"
   end

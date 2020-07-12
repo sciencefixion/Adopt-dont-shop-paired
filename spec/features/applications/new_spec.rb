@@ -20,7 +20,7 @@ RSpec.describe "Applications index page" do
       sex: 'male',
       shelter: @shelter)
     @application = Application.create!(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
-    ApplicationPet.create!(@pet_1.id, @application.id)
+    ApplicationPet.create!(pet: @pet_1, application: @application)
   end
 
   it 'can apply to adopt pets from the favorites list' do
@@ -48,7 +48,10 @@ RSpec.describe "Applications index page" do
     expect(page).to have_content("Phone number")
     expect(page).to have_button("Submit Adoption Application")
 
+    check("pet_ids[]", match: :first)
+
     click_button "Submit Adoption Application"
+
 
     expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
     expect(current_path).to eq("/favorites")

@@ -2,13 +2,13 @@
 <h3>Please select the pet(s) you are applying to adopt</h3>
 
 <div class="application">
+  <br>
   <%= form_tag("/applications", method: :post) do %>
+    <br>
     <% @pets.each do |pet| %>
       <%= check_box_tag 'pet_ids[]', pet.id -%>
       <%= h pet.name -%>
     <% end %>
-    <br>
-    <br>
     <%= label_tag :name %><br/>
     <%= text_field_tag :name %><br/>
     <br>
