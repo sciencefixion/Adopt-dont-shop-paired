@@ -1165,12 +1165,12 @@
           1,
           null,
           1,
-          73,
+          74,
           null,
           null,
           1,
-          71,
-          18,
+          72,
+          19,
           null,
           null
         ]
@@ -1179,7 +1179,7 @@
         "lines": [
           1,
           1,
-          5,
+          6,
           null,
           null,
           1,
@@ -1218,12 +1218,21 @@
           null,
           1,
           1,
+          1,
+          1,
           null,
           null,
           1,
           1,
-          0,
+          1,
           null,
+          null
+        ]
+      },
+      "/Users/jejdelman/turing/module2/projects/Adopt-dont-shop-paired/app/models/application.rb": {
+        "lines": [
+          1,
+          1,
           null
         ]
       },
@@ -1339,6 +1348,6 @@
         ]
       }
     },
-    "timestamp": 1594521390
+    "timestamp": 1594522469
   }
 }

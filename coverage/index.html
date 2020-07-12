@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-11T22:36:30-04:00">2020-07-11T22:36:30-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-11T22:54:29-04:00">2020-07-11T22:54:29-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  99.27%
+  99.46%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.73
+         1.74
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>51</b> files in total.
+    <b>52</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>549</b> relevant lines,
-    <span class="green"><b>545</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed. </span>
+    <b>553</b> relevant lines,
+    <span class="green"><b>550</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  99.27%
+  99.46%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#475b897892a4183d7eb7a135305c37f4372e2f18" class="src_link" title="app/controllers/applications_controller.rb">app/controllers/applications_controller.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1.30</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.33</td>
             
           </tr>
         
@@ -99,7 +99,7 @@
             <td class="cell--number">20</td>
             <td class="cell--number">20</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.65</td>
+            <td class="cell--number">3.70</td>
             
           </tr>
         
@@ -148,6 +148,17 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#2ece8708363846c88a4e3f247900411fc214317f" class="src_link" title="app/models/application.rb">app/models/application.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#2d69acfbe89002beb3e809a25ccee2cafd96754e" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">3</td>
@@ -165,7 +176,7 @@
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">23.71</td>
+            <td class="cell--number">24.14</td>
             
           </tr>
         
@@ -716,8 +727,8 @@
   <div class="header">
     <h3>app/controllers/applications_controller.rb</h3>
     <h4>
-      <span class="yellow">
-  90.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -726,9 +737,9 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -838,7 +849,29 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    flash[:notice] = &quot;Your application was received. Thank you for applying to adopt. We will be in touch shortly.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    redirect_to &quot;/favorites&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -849,7 +882,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -860,7 +893,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
@@ -871,7 +904,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
@@ -882,18 +915,18 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    params.permit(:pets, :name, :address, :city, :state, :zip, :phone_number, :description)</code>
+            
+
+            <code class="ruby">    params.permit(:pet_ids, :name, :address, :city, :state, :zip, :phone_number, :description)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -904,7 +937,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -968,8 +1001,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="3">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="3">
+            <span class="hits">6</span>
             
 
             
@@ -3109,6 +3142,70 @@
 </div>
 
       
+        <div class="source_table" id="2ece8708363846c88a4e3f247900411fc214317f">
+  <div class="header">
+    <h3>app/models/application.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>2</b> relevant lines.
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Application &lt; ApplicationRecord</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_presence_of :pet_ids, :name, :address, :city, :state, :zip, :phone_number, :description</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="2d69acfbe89002beb3e809a25ccee2cafd96754e">
   <div class="header">
     <h3>app/models/application_record.rb</h3>
@@ -3244,8 +3341,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="73" data-linenumber="5">
-            <span class="hits">73</span>
+          <li class="covered" data-hits="74" data-linenumber="5">
+            <span class="hits">74</span>
             
 
             
@@ -3288,8 +3385,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="71" data-linenumber="9">
-            <span class="hits">71</span>
+          <li class="covered" data-hits="72" data-linenumber="9">
+            <span class="hits">72</span>
             
 
             
@@ -3299,8 +3396,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="10">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="19" data-linenumber="10">
+            <span class="hits">19</span>
             
 
             
