@@ -1,3 +1,3 @@
 class PetApplication < ApplicationRecord
-  
-end
+
+endgit 
