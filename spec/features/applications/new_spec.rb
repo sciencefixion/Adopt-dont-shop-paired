@@ -61,7 +61,10 @@ RSpec.describe "New Applications page" do
 
     expect(current_path).to eq("/favorites")
 
-    expect(page).to_not have_content(@pet_1.name)
+    within('.pet') do
+      expect(page).to_not have_content(@pet_1.name)
+    end
+
     expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
   end
   it "will not allow an incomplete application" do

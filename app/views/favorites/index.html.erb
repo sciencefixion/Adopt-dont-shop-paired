@@ -1,4 +1,6 @@
 <h1>Favorite Pets</h1>
+<div class="pets">
+
 <% if @favorites.nil? || @favorites.empty? %>
   <p> You have no favorited pets. </p>
 <% else %>
@@ -9,6 +11,7 @@
     <h3><a href="/pets/<%= pet.id %>/"><%= pet.name %></a></h3>
   </div>
   <% end %>
+</div>
   <div class="adopt-app">
     <%= link_to "Apply to Adopt Pet(s)", "/applications/new" %>
   </div>
