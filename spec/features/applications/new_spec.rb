@@ -52,10 +52,9 @@ RSpec.describe "Applications index page" do
 
     click_button "Submit Adoption Application"
 
-
     expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
     expect(current_path).to eq("/favorites")
+
     expect(page).to_not have_content(@pet_1.name)
-    expect(page).to_not have_content(@pet_2.name)
   end
 end

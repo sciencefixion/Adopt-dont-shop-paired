@@ -7,6 +7,10 @@ class ApplicationsController < ApplicationController
 
   def create
     application = Application.create(application_params)
+    params[:pet_ids].each do |pet_id|
+      ApplicationPet.create(pet: Pet.find(pet_id), application: application)
+      session[:favorite_pets].delete(pet_id.to_s)
+    end
     flash[:notice] = "Your application was received. Thank you for applying to adopt. We will be in touch shortly."
     redirect_to "/favorites"
   end
