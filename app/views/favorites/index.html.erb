@@ -15,7 +15,10 @@
   <div class="remove-all">
     <%= link_to "Remove All Favorited Pets", "/favorites", method: :delete %>
   </div>
-  <div class="#adopt-pending">
+  <div class="adopt-pending">
     <p>Pets pending adoption:</p>
+    <% @applied_list.each do |pet| %>
+      <p><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+    <% end %>
   </div>
 <% end %>

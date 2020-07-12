@@ -45,7 +45,7 @@ RSpec.describe "New Applications page" do
 
     expect(current_path).to eq("/favorites")
 
-    within('#adopt-pending') do
+    within('.adopt-pending') do
       expect(page).to have_content("Pets pending adoption:")
       expect(page).to have_content("#{@pet_1.name}")
     end
