@@ -20,7 +20,7 @@ RSpec.describe "Applications index page" do
       sex: 'male',
       shelter: @shelter)
     @application = Application.create!(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
-    PetApplication.create!(@pet_1.id, @application.id)
+    ApplicationPet.create!(@pet_1.id, @application.id)
   end
 
   it 'can apply to adopt pets from the favorites list' do
