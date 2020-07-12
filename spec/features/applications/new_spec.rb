@@ -49,13 +49,21 @@ RSpec.describe "New Applications page" do
     expect(page).to have_button("Submit Adoption Application")
 
     check("pet_ids[]", match: :first)
+    fill_in "Name", with: "Jeff"
+    fill_in "Address", with: "Jeff"
+    fill_in "City", with: "Jeff"
+    fill_in "State", with: "Jeff"
+    fill_in "Zip", with: "Jeff"
+    fill_in "Phone number", with: "Jeff"
+    fill_in "Description", with: "Jeff"
+
 
     click_button "Submit Adoption Application"
 
-    expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
     expect(current_path).to eq("/favorites")
 
     expect(page).to_not have_content(@pet_1.name)
+    expect(page).to have_content("Your application was received. Thank you for applying to adopt. We will be in touch shortly.")
   end
   describe "Incomplete application for a Pet" do
     it "will not allow an incomplete application" do
