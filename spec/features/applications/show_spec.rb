@@ -44,20 +44,6 @@ RSpec.describe 'Application show page', type: :feature do
 
     expect(page).to have_content("Adoption Status: pending")
     expect(page).to have_content("On hold for: Gabby")
-    save_and_open_page
-  end
-  it 'can approve an application for a pet' do
-    visit "/applications/#{@application_1.id}"
-
-    expect(page).to have_content("Approve Application for #{@pet_1.name}")
-
-    click_on "Approve Application for #{@pet_1.name}"
-
-    expect(current_path).to eq("/pets/#{@pet_1.id}")
-
-    expect(page).to have_content("Adoption Status: pending")
-    expect(page).to have_content("On hold for: Gabby")
-    save_and_open_page
   end
   it 'can approve an application for more than one pet' do
     application_2 = Application.create(name: 'Hilal', address: "19 Gold Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I love all the pets.")
