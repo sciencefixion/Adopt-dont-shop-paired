@@ -54,7 +54,6 @@ RSpec.describe 'Application show page', type: :feature do
     expect(page).to have_content("Adoption Status: pending")
     expect(page).to have_content("On hold for: Gabby")
   end
-<<<<<<< HEAD
 
   it "will not allow more than one approved applicant per pet" do
     #     As a visitor
@@ -64,10 +63,8 @@ RSpec.describe 'Application show page', type: :feature do
     # (This can be done by either taking away the option to approve the application, or having a flash message pop up saying that no more applications can be approved for this pet at this time)
     application_2 = Application.create(name: 'Crabby', address: "24 Sliver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8789", description: "I'm a fish who needs a bicycle.")
     ApplicationPet.create(pet: @pet_1, application: application_2)
-=======
   it 'can approve an application for more than one pet' do
     visit "/applications/#{@application_2.id}"
->>>>>>> 46f7dff... Add spec to test that user can revoke an approved application
 
     visit "/pets"
     click_on "Maggie"
