@@ -24,21 +24,12 @@ class PetsController < ApplicationController
 
     @link_title = ''
     @link_method = ''
-     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
-
-       @link_title = "Add Pet to Favorites"
-       @link_method = :patch
-     else
-       @link_title = "Remove Pet from Favorites"
-       @link_method = :delete
-     end
-
-    @adoptable = ''
-    require "pry"; binding.pry
-    if @pet.adoptable
-      @adoptable = "adoptable"
+    if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
+      @link_title = "Add Pet to Favorites"
+      @link_method = :patch
     else
-      @adoptable = "pending"
+      @link_title = "Remove Pet from Favorites"
+      @link_method = :delete
     end
   end
 
@@ -51,6 +42,13 @@ class PetsController < ApplicationController
   def destroy
     Pet.destroy(params[:id])
     redirect_to '/pets'
+  end
+
+  def approval
+    @pet = Pet.find(params[:id])
+    @pet.adoptable = false
+    @pet.save
+    redirect_to "/pets/#{@pet.id}"
   end
 
   private

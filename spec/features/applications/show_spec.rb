@@ -42,6 +42,7 @@ RSpec.describe 'Application show page', type: :feature do
 
     expect(current_path).to eq("/pets/#{@pet_1.id}")
 
+    save_and_open_page
     expect(page).to have_content("Adoption Status: pending")
     expect(page).to have_content("On hold for Gabby")
   end
