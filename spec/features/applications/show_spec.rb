@@ -31,6 +31,5 @@ RSpec.describe 'Application show page', type: :feature do
     expect(page).to have_content("#{application.state}")
     expect(page).to have_content("#{application.zip}")
     expect(page).to have_content("#{application.phone_number}")
-
   end
 end

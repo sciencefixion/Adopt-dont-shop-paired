@@ -1,4 +1,11 @@
 <h1>All Applications for <%= @pet.name %></h1>
-<% @applications.each do |application| %>
-  <p><%= link_to "#{application.name}", "/applications/#{application.id}" %></p>
-<% end %>
+
+<div class="applicants">
+  <% if @applications.nil? || @applications.empty? %>
+    <p><%= "#{@pet.name} has no applicants yet." %></p>
+  <% else %>
+    <% @applications.each do |application| %>
+      <p><%= link_to "#{application.name}", "/applications/#{application.id}" %></p>
+    <% end %>
+  <% end %>
+</div>
