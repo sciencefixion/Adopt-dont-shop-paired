@@ -7,13 +7,13 @@ RSpec.describe "New Applications page" do
       city: 'Denver',
       state: 'CO',
       zip: '80208')
-    @pet_1 = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+    @pet_1 = Pet.create(image: 'https://shorturl.me/dxWayj2',
       name: 'Maggie',
       description: 'A thoughtful sentient being',
       age: '2 years',
       sex: 'female',
       shelter: @shelter)
-    @pet_2 = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+    @pet_2 = Pet.create(image: 'https://shorturl.me/dxWayj2',
       name: 'Shaggie',
       description: 'Another thoughtful sentient being',
       age: '3 years',
@@ -86,4 +86,5 @@ RSpec.describe "New Applications page" do
 
     expect(page).to have_content("Application Incomplete! The form must be completed to submit an application.")
   end
+
 end
