@@ -19,6 +19,12 @@ RSpec.describe 'Application show page', type: :feature do
       age: '3 years',
       sex: 'male',
       shelter: @shelter)
+    @pet_3 = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+      name: 'Waggie',
+      description: 'Yet another thoughtful sentient being',
+      age: '4 years',
+      sex: 'female',
+      shelter: @shelter)
     @application = Application.create(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
     ApplicationPet.create(pet: @pet_1, application: @application)
   end
@@ -47,16 +53,23 @@ RSpec.describe 'Application show page', type: :feature do
   end
   it 'can approve an application for more than one pet' do
     application_2 = Application.create(name: 'Hilal', address: "19 Gold Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I love all the pets.")
-    ApplicationPet.create(pet: @pet_1, application: application_2)
     ApplicationPet.create(pet: @pet_2, application: application_2)
+    ApplicationPet.create(pet: @pet_3, application: application_2)
 
-    expect(page).to have_content("Approve Application for:")
-    expect(page).to have_content("#{@pet_1.name}")
+    visit "/applications/#{application_2.id}"
+
+    expect(page).to have_content("Approve Application for #{@pet_2.name}")
+    click_on "Approve Application for #{@pet_2.name}"
+    expect(current_path).to eq("/pets/#{@pet_2.id}")
+    expect(page).to have_content("Adoption Status: pending")
+
+    expect(page).to have_content("On hold for: Hilal")
+
+    visit "/applications/#{application_2.id}"
+    expect(page).to have_content("Approve Application for #{@pet_3.name}")
+    click_on "Approve Application for #{@pet_3.name}"
+    expect(current_path).to eq("/pets/#{@pet_3.id}")
+    expect(page).to have_content("Adoption Status: pending")
+    expect(page).to have_content("On hold for: Hilal")
   end
-  #   User Story 23, Users can get approved to adopt more than one pet
-  #
-  # As a visitor
-  # When an application is made for more than one pet
-  # When I visit that applications show page
-  # I'm able to approve the application for any number of pets
 end
