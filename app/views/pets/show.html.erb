@@ -6,7 +6,7 @@
 <p>Shelter: <%= @pet.shelter.name %></p>
 <p>Adoption Status: <%= @pet.adoptable %></p>
 <% if @pet.adoptable == "pending" %>
-  <p>This pet is currently on hold for: <%= @applicant.pop.name %></p>
+  <p>On hold for: <%= @applicant.pop.name %></p>
 <% end %>
 <ul>
   <li><%= link_to "#{@link_title}", "/favorites/#{@pet.id}", method: @link_method %></li>

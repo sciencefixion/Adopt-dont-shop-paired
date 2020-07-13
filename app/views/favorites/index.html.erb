@@ -6,7 +6,6 @@
 <% else %>
   <% @favorites.each do |favorite_id, favorite_count| %>
   <div class="pet">
-    <% require "pry"; binding.pry %>
     <% pet = Pet.find(favorite_id) %>
     <img src=<%= pet.image %> alt=<%= pet.name %></img>
     <h3><a href="/pets/<%= pet.id %>/"><%= pet.name %></a></h3>
