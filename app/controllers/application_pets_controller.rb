@@ -6,9 +6,16 @@ class ApplicationPetsController < ApplicationController
   end
 
   def update
-    pet = Pet.find(params[:id])
-    pet.update(adoptable: "pending")
-    redirect_to "/pets/#{pet.id}"
+    @pet = Pet.find(params[:id])
+    if @pet.adoptable == "adoptable"
+      @pet.update(adoptable: "pending")
+      @pet.save
+      redirect_to "/pets/#{@pet.id}"
+    else
+      @pet.update(adoptable: "adoptable")
+      @pet.save
+      redirect_to "/applications/#{application.id}""
+    end
   end
 
   private

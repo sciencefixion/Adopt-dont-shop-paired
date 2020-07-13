@@ -84,8 +84,11 @@ RSpec.describe 'Application show page', type: :feature do
     expect(page).to_not have_content("Approve Application for Maggie")
     expect(page).to have_content("#{@pet_1.name} is already on hold by another applicant.")
   end
-  it 'can revoked an approved application' do
+  it 'can revoke an approved application' do
     visit "/applications/#{@application_2.id}"
+    # click_on "Approve Application for #{@pet_2.name}"
+    # visit "/applications/#{@application_2.id}"
+    # click_on "Approve Application for #{@pet_3.name}"
 
     expect(page).to have_content("Revoke Application for #{@pet_2.name}")
     click_on "Revoke Application for #{@pet_2.name}"

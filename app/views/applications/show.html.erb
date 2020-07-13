@@ -8,10 +8,18 @@
 <p><%= @application.description %></p>
 
 <% @pets.each do |pet| %>
+<<<<<<< HEAD
   <p><% if pet.adoptable? %>
       <%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %>
     <% else %>
       <%= "#{pet.name} is already on hold by another applicant." %>
     <% end %>
   </p>
+=======
+  <% if pet.adoptable == "adoptable" %>
+    <p><%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
+  <% else %>
+    <p><%= link_to "Revoke Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
+  <% end %>
+>>>>>>> fb461fb... Work on failing test - no revoke application
 <% end %>
