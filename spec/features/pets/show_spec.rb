@@ -44,12 +44,12 @@ RSpec.describe 'pet id page', type: :feature do
     expect(page).to have_content("View All Applications for #{pet_1.name}")
 
     click_on "View All Applications for #{pet_1.name}"
-    expect(current_path).to eq("/applicationpets/#{pet.id}")
+    expect(current_path).to eq("/applicationpets/#{pet_1.id}")
 
     expect(page).to have_content(application.name)
 
     click_on "#{application.name}"
-    expect(current_path).to eq("/application/#{application.id}")
+    expect(current_path).to eq("/applications/#{application.id}")
   end
 #   As a visitor
 # When I visit a pets show page
