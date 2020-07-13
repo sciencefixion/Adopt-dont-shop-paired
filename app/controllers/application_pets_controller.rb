@@ -14,7 +14,7 @@ class ApplicationPetsController < ApplicationController
     else
       @pet.update(adoptable: "adoptable")
       @pet.save
-      redirect_to "/applications/#{application.id}""
+      redirect_to "/applications/#{application.id}"
     end
   end
 
