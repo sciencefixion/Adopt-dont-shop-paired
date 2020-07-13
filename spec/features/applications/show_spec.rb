@@ -59,7 +59,7 @@ RSpec.describe 'Application show page', type: :feature do
     application_2 = Application.create(name: 'Crabby', address: "24 Sliver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8789", description: "I'm a fish who needs a bicycle.")
     ApplicationPet.create(pet: @pet_1, application: application_2)
     visit "/pets"
-    
+
     click_on "Maggie"
     click_on "Add Pet to Favorites"
 
@@ -76,16 +76,29 @@ RSpec.describe 'Application show page', type: :feature do
   end
 
   it 'can revoke an approved application' do
-    visit "/applications/#{@application_2.id}"
+    pet_4 = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+      name: 'Magpie',
+      description: 'A thoughtful sentient being',
+      age: '2 years',
+      sex: 'female',
+      shelter: @shelter)
+    application_3 = Application.create(name: 'Dabby', address: "24 Sliver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8789", description: "I'm a fish who needs a bicycle.")
+    ApplicationPet.create(pet: pet_4, application: application_3)
+    visit "/pets"
 
-    expect(page).to have_content("Revoke Application for #{@pet_2.name}")
-    click_on "Revoke Application for #{@pet_2.name}"
+    visit "/applicationpets/#{pet_4.id}"
+    click_on "Dabby"
+    click_on "Approve Application for Magpie"
 
-    expect(current_path).to eq("/applications/#{@application_2.id}")
-    expect(page).to have_content("Approve Application for #{@pet_2.name}")
+    visit "/applications/#{application_3.id}"
+    expect(page).to have_content("Revoke Application for #{pet_4.name}")
+    click_on "Revoke Application for #{pet_4.name}"
 
-    visit "/pets/#{@pet_2.id}"
+    expect(current_path).to eq("/applications/#{application_3.id}")
+    expect(page).to have_content("Approve Application for #{pet_4.name}")
+
+    visit "/pets/#{pet_4.id}"
     expect(page).to have_content("Adoption Status: adoptable")
-    expect(page).to_not have_content("On hold for: Hilal")
+    expect(page).to_not have_content("On hold for: Dabby")
   end
 end

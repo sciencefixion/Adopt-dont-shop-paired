@@ -7,6 +7,8 @@ class ApplicationPetsController < ApplicationController
 
   def update
     @pet = Pet.find(params[:id])
+    app_pet = ApplicationPet.where(pet_id: @pet.id).pluck(:application_id)
+    applicant = Application.find(app_pet).pop
     if @pet.adoptable == "adoptable"
       @pet.update(adoptable: "pending")
       @pet.save
@@ -14,7 +16,7 @@ class ApplicationPetsController < ApplicationController
     else
       @pet.update(adoptable: "adoptable")
       @pet.save
-      redirect_to "/applications/#{application.id}"
+      redirect_to "/applications/#{applicant.id}"
     end
   end
 
