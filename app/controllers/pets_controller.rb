@@ -32,6 +32,14 @@ class PetsController < ApplicationController
        @link_title = "Remove Pet from Favorites"
        @link_method = :delete
      end
+
+    @adoptable = ''
+    require "pry"; binding.pry
+    if @pet.adoptable
+      @adoptable = "adoptable"
+    else
+      @adoptable = "pending"
+    end
   end
 
   def update

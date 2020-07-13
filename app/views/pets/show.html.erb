@@ -4,7 +4,7 @@
 <p>Age: <%= @pet.age %> old</p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Shelter: <%= @pet.shelter.name %></p>
-<p>Adoption status: <%= "adoptable" if @pet.adoptable %></p>
+<p>Adoption status: <%= @adoptable %></p>
 <ul>
   <li><%= link_to "#{@link_title}", "/favorites/#{@pet.id}", method: @link_method %></li>
   <li><%= link_to "View All Applications for #{@pet.name}", "/applicationpets/#{@pet.id}" %>

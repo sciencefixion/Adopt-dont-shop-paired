@@ -9,4 +9,5 @@
 
 <% @pets.each do |pet| %>
   <%= link_to "Approve Application for #{pet.name}", "/pets/#{pet.id}", pet.update(adoptable: !pet.adoptable?) %>
+  <% require "pry"; binding.pry %>
 <% end %>
