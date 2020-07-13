@@ -23,6 +23,8 @@ class ApplicationsController < ApplicationController
 
   def show
     @application = Application.find(params[:id])
+    app_pets = ApplicationPet.where(application_id: @application.id).pluck(:pet_id)
+    @pets = app_pets.map { |app_pet| Pet.find(app_pet) }
   end
 
   private

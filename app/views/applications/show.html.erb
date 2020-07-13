@@ -6,3 +6,7 @@
 <p><%= @application.zip %></p>
 <p><%= @application.phone_number %></p>
 <p><%= @application.description %></p>
+
+<% @pets.each do |pet| %>
+  <%= link_to "Approve Application for #{pet.name}", "/pets/#{pet.id}", pet.update(adoptable: !pet.adoptable?) %>
+<% end %>
