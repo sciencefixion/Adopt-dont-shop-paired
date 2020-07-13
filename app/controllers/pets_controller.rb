@@ -21,17 +21,16 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     @favorites = session[:favorite_pets]
+    app_pet = ApplicationPet.where(pet_id: @pet.id).pluck(:application_id)
+    @applicant = Application.find(app_pet)
 
-    @link_title = ''
-    @link_method = ''
-     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
-
-       @link_title = "Add Pet to Favorites"
-       @link_method = :patch
-     else
-       @link_title = "Remove Pet from Favorites"
-       @link_method = :delete
-     end
+    if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
+      @link_title = "Add Pet to Favorites"
+      @link_method = :patch
+    else
+      @link_title = "Remove Pet from Favorites"
+      @link_method = :delete
+    end
   end
 
   def update
@@ -42,6 +41,9 @@ class PetsController < ApplicationController
 
   def destroy
     Pet.destroy(params[:id])
+    unless session[:favorite_pets].nil?
+      session[:favorite_pets].delete(params[:id])
+    end
     redirect_to '/pets'
   end
 

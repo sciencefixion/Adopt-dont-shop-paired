@@ -6,3 +6,7 @@
 <p><%= @application.zip %></p>
 <p><%= @application.phone_number %></p>
 <p><%= @application.description %></p>
+
+<% @pets.each do |pet| %>
+  <p><%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
+<% end %>
