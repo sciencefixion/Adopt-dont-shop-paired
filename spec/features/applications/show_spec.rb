@@ -46,7 +46,7 @@ RSpec.describe 'Application show page', type: :feature do
     expect(page).to have_content("On hold for: Gabby")
   end
 
-  it "will not allow more than one approved applicant" do
+  it "will not allow more than one approved applicant per pet" do
     #     As a visitor
     # When a pet has more than one application made for them
     # And one application has already been approved for them
