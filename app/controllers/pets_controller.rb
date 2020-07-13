@@ -21,8 +21,8 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     @favorites = session[:favorite_pets]
-
-    @applicant =
+    app_pet = ApplicationPet.where(pet_id: @pet.id).pluck(:application_id)
+    @applicant = Application.find(app_pet)
 
     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
       @link_title = "Add Pet to Favorites"
@@ -41,6 +41,9 @@ class PetsController < ApplicationController
 
   def destroy
     Pet.destroy(params[:id])
+    unless session[:favorite_pets].nil?
+      session[:favorite_pets].delete(params[:id])
+    end
     redirect_to '/pets'
   end
 
