@@ -22,6 +22,8 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @favorites = session[:favorite_pets]
 
+    @applicant =
+
     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
       @link_title = "Add Pet to Favorites"
       @link_method = :patch
@@ -33,7 +35,7 @@ class PetsController < ApplicationController
 
   def update
     @pet = Pet.find(params[:id])
-    @pet.update(adoptable: "pending")
+    @pet.update(pet_params)
     redirect_to "/pets/#{@pet.id}"
   end
 
