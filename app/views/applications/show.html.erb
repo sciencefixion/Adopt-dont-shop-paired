@@ -8,5 +8,10 @@
 <p><%= @application.description %></p>
 
 <% @pets.each do |pet| %>
-  <p><%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
+  <p><% if pet.adoptable? %>
+      <%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %>
+    <% else %>
+      <%= "#{pet.name} is already on hold by another applicant." %>
+    <% end %>
+  </p>
 <% end %>

@@ -86,56 +86,5 @@ RSpec.describe "New Applications page" do
 
     expect(page).to have_content("Application Incomplete! The form must be completed to submit an application.")
   end
-  it "will not allow more than one approved applicant" do
-    #     As a visitor
-    # When a pet has more than one application made for them
-    # And one application has already been approved for them
-    # I can not approve any other applications for that pet but all other applications still remain on file (they can be seen on the pets application index page)
-    # (This can be done by either taking away the option to approve the application, or having a flash message pop up saying that no more applications can be approved for this pet at this time)
-    application = Application.create(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
-    ApplicationPet.create(pet: @pet_1, application: application)
 
-
-    visit "/pets"
-    click_on "Maggie"
-    click_on "Add Pet to Favorites"
-    click_on "Shaggie"
-    click_on "Add Pet to Favorites"
-
-    visit '/favorites'
-
-    click_on "Apply to Adopt Pet(s)"
-
-    check("pet_ids[]", match: :first)
-    fill_in "Name", with: "Jeff"
-    fill_in "Address", with: "Jeff"
-    fill_in "City", with: "Jeff"
-    fill_in "State", with: "Jeff"
-    fill_in "Zip", with: "Jeff"
-    fill_in "Phone number", with: "Jeff"
-    fill_in "Description", with: "Jeff"
-    click_button "Submit Adoption Application"
-
-    # expect(current_path).to eq("/favorites")
-    #
-    # within('.pet') do
-    #   expect(page).to_not have_content(@pet_1.name)
-    # end
-
-    visit "/applicationpets/#{@pet_1.id}"
-
-    click_on "Jeff"
-    click_on "Approve Application for Jeff"
-
-    visit "/applicationpets/#{@pet_1.id}"
-
-    click_on "Gabby"
-    click_on "Approve Application for Gabby"
-
-    expect(current_path).to eq("/pets/#{@pet_1.id}")
-
-
-    expect(page).to have_content("#{@pet_1} already has a pending applicant. Application cannot be approved at this time.")
-
-  end
 end
