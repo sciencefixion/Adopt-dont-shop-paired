@@ -44,7 +44,7 @@ RSpec.describe 'Application show page', type: :feature do
   end
   it 'can approve an application for a pet' do
     visit "/applications/#{@application.id}"
-    save_and_open_page
+
     expect(page).to have_content("Approve Application for #{@pet_1.name}")
 
     click_on "Approve Application for #{@pet_1.name}"
@@ -58,7 +58,8 @@ RSpec.describe 'Application show page', type: :feature do
   it "will not allow more than one approved applicant per pet" do
     application_2 = Application.create(name: 'Crabby', address: "24 Sliver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8789", description: "I'm a fish who needs a bicycle.")
     ApplicationPet.create(pet: @pet_1, application: application_2)
-
+    visit "/pets"
+    
     click_on "Maggie"
     click_on "Add Pet to Favorites"
 
