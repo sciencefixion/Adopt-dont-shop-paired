@@ -19,6 +19,12 @@ RSpec.describe 'Application show page', type: :feature do
       age: '3 years',
       sex: 'male',
       shelter: @shelter)
+    @pet_3 = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+      name: 'Waggie',
+      description: 'Yet another thoughtful sentient being',
+      age: '4 years',
+      sex: 'female',
+      shelter: @shelter)
     @application = Application.create(name: 'Gabby', address: "24 Silver Street", city: "Springfield", state: "MA", zip: "01108", phone_number: "555-8987", description: "I'm a clown who needs a sidekick.")
     ApplicationPet.create(pet: @pet_1, application: @application)
   end
@@ -69,7 +75,5 @@ RSpec.describe 'Application show page', type: :feature do
     click_on "Crabby"
     expect(page).to_not have_content("Approve Application for Maggie")
     expect(page).to have_content("#{@pet_1.name} is already on hold by another applicant.")
-
-
   end
 end

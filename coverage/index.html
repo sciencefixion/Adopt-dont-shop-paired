@@ -4021,7 +4021,6 @@
         <div>
           <li class="covered" data-hits="104" data-linenumber="9">
             <span class="hits">104</span>
-            
 
             
 
@@ -8680,6 +8679,7 @@
         <div>
           <li class="covered" data-hits="3" data-linenumber="22">
             <span class="hits">3</span>
+
             
 
             
@@ -8690,6 +8690,7 @@
       
         <div>
           <li class="covered" data-hits="3" data-linenumber="23">
+
             <span class="hits">3</span>
             
 
@@ -8700,79 +8701,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
             
 
             <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;shows an individual Application&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit &quot;/applications/#{@application.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.name}&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.description}&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.address}&quot;)</code>
           </li>
         </div>
       
@@ -8783,7 +8718,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.city}&quot;)</code>
+            <code class="ruby">  it &#39;shows an individual Application&#39; do</code>
           </li>
         </div>
       
@@ -8794,18 +8729,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.state}&quot;)</code>
+            <code class="ruby">    visit &quot;/applications/#{@application.id}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="33">
+            
             
 
             
 
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.zip}&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8816,18 +8751,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&quot;#{@application.phone_number}&quot;)</code>
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.name}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.description}&quot;)</code>
           </li>
         </div>
       
@@ -8838,7 +8773,7 @@
 
             
 
-            <code class="ruby">  it &#39;can approve an application for a pet&#39; do</code>
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.address}&quot;)</code>
           </li>
         </div>
       
@@ -8849,18 +8784,18 @@
 
             
 
-            <code class="ruby">    visit &quot;/applications/#{@application.id}&quot;</code>
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.city}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.state}&quot;)</code>
           </li>
         </div>
       
@@ -8871,40 +8806,40 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&quot;Approve Application for #{@pet_1.name}&quot;)</code>
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.zip}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    click_on &quot;Approve Application for #{@pet_1.name}&quot;</code>
+            <code class="ruby">    expect(page).to have_content(&quot;#{@application.phone_number}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can approve an application for a pet&#39; do</code>
           </li>
         </div>
       
@@ -8915,7 +8850,7 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq(&quot;/pets/#{@pet_1.id}&quot;)</code>
+            <code class="ruby">    visit &quot;/applications/#{@application.id}&quot;</code>
           </li>
         </div>
       
@@ -8937,12 +8872,78 @@
 
             
 
+            <code class="ruby">    expect(page).to have_content(&quot;Approve Application for #{@pet_1.name}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_on &quot;Approve Application for #{@pet_1.name}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/pets/#{@pet_1.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content(&quot;Adoption Status: pending&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
@@ -8953,7 +8954,10 @@
         </div>
       
         <div>
+
           <li class="never" data-hits="" data-linenumber="47">
+            
+
             
             
 
@@ -8964,7 +8968,163 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
+            
+
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;Approve Application for #{@pet_2.name}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_on &quot;Approve Application for #{@pet_2.name}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/pets/#{@pet_2.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;Adoption Status: pending&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;On hold for: Hilal&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/applications/#{application_2.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;Approve Application for #{@pet_3.name}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_on &quot;Approve Application for #{@pet_3.name}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="71">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/pets/#{@pet_3.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;Adoption Status: pending&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="73">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(&quot;On hold for: Hilal&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
             
             
 
