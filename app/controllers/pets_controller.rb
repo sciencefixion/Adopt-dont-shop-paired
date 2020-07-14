@@ -42,7 +42,12 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.update(pet_params)
     @pet.save
-    redirect_to "/pets/#{@pet.id}"
+    if @pet.save
+      redirect_to "/pets/#{@pet.id}"
+    else
+      flash[:notice] = "Pet Not Updated! Required Content Missing."
+      redirect_to "/pets/#{@pet.id}/edit"
+    end
   end
 
   def destroy

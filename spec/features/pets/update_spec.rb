@@ -8,23 +8,23 @@ RSpec.describe 'pet update page', type: :feature do
       state: 'CO',
       zip: '80208')
 
+      @pet = Pet.create(image: 'pic 2',
+        name: 'Maggie',
+        description: 'A thoughtful sentient being',
+        age: '2 years',
+        sex: 'female',
+        shelter: @shelter)
   end
   it 'can update an existing pet' do
-    pet = Pet.create(image: 'pic 2',
-      name: 'Maggie',
-      description: 'A thoughtful sentient being',
-      age: '2 years',
-      sex: 'female',
-      shelter: @shelter)
 
     name = 'Margaret'
 
-    visit "/pets/#{pet.id}"
+    visit "/pets/#{@pet.id}"
     click_on 'Update Pet'
-    expect(current_path).to eq("/pets/#{pet.id}/edit")
+    expect(current_path).to eq("/pets/#{@pet.id}/edit")
     fill_in 'Name', with: name
     click_on 'Update Pet'
-    expect(current_path).to eq("/pets/#{pet.id}")
+    expect(current_path).to eq("/pets/#{@pet.id}")
 
     expect(page).to have_content('Margaret')
     expect(page).to_not have_content('Maggie')
@@ -54,20 +54,13 @@ RSpec.describe 'pet update page', type: :feature do
     expect(page).to have_content("Pet Not Created! Required Content Missing.")
     expect(current_path).to eq("/shelters/#{@shelter.id}/pets/new")
 
-    # title = ""
-    # fill_in "Title", with: title
-    #
-    # click_on "Update Shelter Review"
-    #
-    # expect(page).to have_content("Shelter Review Not Updated! Required Content Missing.")
-    # expect(page).to have_button("Update Shelter Review")
+    visit "/pets/#{@pet.id}/edit"
 
+    fill_in "Description", with: ""
+
+    click_on "Update Pet"
+
+    expect(page).to have_content("Pet Not Updated! Required Content Missing.")
+    expect(current_path).to eq("/pets/#{@pet.id}/edit")
   end
 end
-
-# if shelter.save
-#   redirect_to "/shelters"
-# else
-#   flash[:notice] = "Shelter could not be created: incomplete information"
-#   redirect_to "/shelters/new"
-# end
