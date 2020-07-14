@@ -19,6 +19,14 @@ class SheltersController < ApplicationController
   def show
     @shelter = Shelter.find(params[:id])
     @shelter_reviews = @shelter.shelter_reviews
+    if @shelter_reviews.count == 0
+      @review_average = 0
+    else
+      @review_average = ((@shelter_reviews.inject(0) {|sum, review| sum + review.rating }) / @shelter_reviews.count)
+    end
+    pets = Pet.all.where(shelter_id: @shelter.id)
+    apps = pets.map { |pet| ApplicationPet.where(pet_id: pet.id).pluck(:application_id) }
+    @app_count = apps.uniq.count
   end
 
   def edit
