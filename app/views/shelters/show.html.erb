@@ -4,6 +4,16 @@
   <p><%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></p>
 </div>
 <br>
+<nav>
+  <ul>
+    <li>Total Number of Pets: <%= @shelter.pets.count %></li>
+    <li>|</li>
+    <li>Average Rating: <%= @review_average %></li>
+    <li>|</li>
+    <li>Number of Applications: <%= @app_count %></li>
+  </ul>
+</nav>
+<br>
 <div class="links"
   <br>
   <ul>
