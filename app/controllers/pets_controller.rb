@@ -13,9 +13,14 @@ class PetsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:shelter_id])
-    pet = shelter.pets.create!(pet_params)
-    pet.save!
-    redirect_to "/shelters/#{shelter.id}/pets/"
+    pet = shelter.pets.create(pet_params)
+    pet.save
+    if pet.save
+      redirect_to "/shelters/#{shelter.id}/pets/"
+    else
+      flash[:notice] = "Pet Not Created! Required Content Missing."
+      redirect_to "/shelters/#{shelter.id}/pets/new"
+    end
   end
 
   def show
