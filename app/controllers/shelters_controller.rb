@@ -38,20 +38,14 @@ class SheltersController < ApplicationController
     can_destroy = true
     unless pets.empty?
       pets.each do |pet|
-        can_destroy = false if pet.adoptable == "pending"
+        can_destroy = false if !pet.adoptable?
       end
     end
-    unless can_destroy == false
-      pets.each do |pet|
-        pet.destroy
-      end
+    unless !can_destroy
+      pets.destroy_all
+      reviews.destroy_all
     end
-    unless can_destroy == false
-      reviews.each do |review|
-        review.destroy
-      end
-    end
-    if can_destroy == true
+    if can_destroy
       @shelter.destroy
       redirect_to '/shelters'
     else
