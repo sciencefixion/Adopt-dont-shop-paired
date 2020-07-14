@@ -28,15 +28,26 @@ class SheltersController < ApplicationController
   end
 
   def destroy
-    shelter = Shelter.find(params[:id])
-    pets = Pet.where("shelter_id = #{shelter.id}")
+    @shelter = Shelter.find(params[:id])
+    pets = Pet.where("shelter_id = #{@shelter.id}")
+    can_destroy = true
     unless pets.empty?
+      pets.each do |pet|
+        can_destroy = false if pet.adoptable == "pending"
+      end
+    end
+    unless can_destroy == false
       pets.each do |pet|
         pet.destroy
       end
     end
-    shelter.destroy
-    redirect_to '/shelters'
+    if can_destroy == true
+      @shelter.destroy
+      redirect_to '/shelters'
+    else
+      flash[:notice] = "Shelter #{@shelter.name} cannot be deleted: contains pet(s) pending adoption"
+      redirect_to "/shelters/#{@shelter.id}"
+    end
   end
 
   def pets
@@ -45,7 +56,6 @@ class SheltersController < ApplicationController
   end
 
   def new_review
-
   end
 
   private
