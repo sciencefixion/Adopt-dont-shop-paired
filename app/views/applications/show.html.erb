@@ -12,6 +12,5 @@
     <p><%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
   <% else %>
     <p><%= link_to "Revoke Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
-    <%= "#{pet.name} is already on hold by another applicant." %>
   <% end %>
 <% end %>
