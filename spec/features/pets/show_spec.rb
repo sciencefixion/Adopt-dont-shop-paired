@@ -23,4 +23,5 @@ RSpec.describe 'pet id page', type: :feature do
     expect(page).to have_content("#{pet.sex}")
     expect(page).to have_content("adoptable")
   end
+  
 end

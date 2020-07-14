@@ -51,7 +51,7 @@ RSpec.describe "shelter id page", type: :feature do
     ApplicationPet.create(pet: pet_3, application: application_2)
     visit "/shelters/#{shelter.id}"
 
-    expect(page).to have_content("Total number of pets in shelter: 3")
+    expect(page).to have_content("Total Number of Pets: 3")
     expect(page).to have_content("Average Rating: 4")
     expect(page).to have_content("Number of Applications: 2")
   end

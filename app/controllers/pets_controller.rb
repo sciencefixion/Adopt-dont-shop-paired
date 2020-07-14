@@ -41,11 +41,18 @@ class PetsController < ApplicationController
   end
 
   def destroy
-    Pet.destroy(params[:id])
-    unless session[:favorite_pets].nil?
-      session[:favorite_pets].delete(params[:id])
+    pet = Pet.find(params[:id])
+    if pet.adoptable?
+      ApplicationPet.where(pet_id: pet.id).destroy_all
+      Pet.destroy(pet.id)
+      unless session[:favorite_pets].nil?
+        session[:favorite_pets].delete(params[:id])
+      end
+      redirect_to '/pets'
+    else
+      flash[:notice] = "Pet #{pet.name} cannot be deleted: pet is pending adoption"
+      redirect_to "/pets/#{pet.id}"
     end
-    redirect_to '/pets'
   end
 
   private
