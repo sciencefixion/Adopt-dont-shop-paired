@@ -8,8 +8,12 @@ class SheltersController < ApplicationController
 
   def create
     shelter = Shelter.create(shelter_params)
-    shelter.save
-    redirect_to "/shelters"
+    if shelter.save
+      redirect_to "/shelters"
+    else
+      flash[:notice] = "Shelter could not be created: incomplete information"
+      redirect_to "/shelters/new"
+    end
   end
 
   def show
@@ -30,6 +34,7 @@ class SheltersController < ApplicationController
   def destroy
     @shelter = Shelter.find(params[:id])
     pets = Pet.where("shelter_id = #{@shelter.id}")
+    reviews = ShelterReview.where("shelter_id = #{@shelter.id}")
     can_destroy = true
     unless pets.empty?
       pets.each do |pet|
@@ -39,6 +44,11 @@ class SheltersController < ApplicationController
     unless can_destroy == false
       pets.each do |pet|
         pet.destroy
+      end
+    end
+    unless can_destroy == false
+      reviews.each do |review|
+        review.destroy
       end
     end
     if can_destroy == true
