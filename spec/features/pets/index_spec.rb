@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'pets index page', type: :feature do
   it 'can see each pet in the system' do
-    shelter = Shelter.create!(name: 'Old Dog Haven',
+    shelter = Shelter.create(name: 'Old Dog Haven',
                                address: '166 Main St',
                                city: 'Denver',
                                state: 'CO',
                                zip: '80208')
-    pet = Pet.create!(image: 'pic 2',
+    pet = Pet.create(image: 'pic 2',
                      name: 'Maggie',
                      age: '2 years',
                      sex: 'female',

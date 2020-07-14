@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'delete pet page', type: :feature do
   it 'can delete an existing pet' do
-    shelter = Shelter.create!(name: 'Old Dog Haven',
+    shelter = Shelter.create(name: 'Old Dog Haven',
                                address: '166 Main St',
                                city: 'Denver',
                                state: 'CO',
                                zip: '80208')
 
-    pet = Pet.create!(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+    pet = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
                      name: 'Maggie',
                      description: 'A thoughtful sentient being',
                      age: '2 years',
@@ -54,5 +54,31 @@ RSpec.describe 'delete pet page', type: :feature do
     click_on "Delete Pet"
 
     expect(page).to have_content("Pet #{pet.name} cannot be deleted: pet is pending adoption")
+  end
+  it "removes a pet from favorites when deleted" do
+    shelter = Shelter.create(name: 'Old Dog Haven',
+                               address: '166 Main St',
+                               city: 'Denver',
+                               state: 'CO',
+                               zip: '80208')
+
+    pet = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+                     name: 'Maggie',
+                     description: 'A thoughtful sentient being',
+                     age: '2 years',
+                     sex: 'female',
+                     shelter: shelter)
+
+    visit '/pets'
+
+    click_on 'Maggie'
+    click_on 'Add Pet to Favorites'
+
+    visit "/pets/#{pet.id}"
+    click_on 'Delete Pet'
+
+    visit '/favorites'
+
+    expect(page).to_not have_content("Maggie")
   end
 end

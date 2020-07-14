@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "new shelter review page" do
   it "can create a new shelter review for a given shelter" do
-    shelter = Shelter.create!(name: "Gimme Shelter", address: "1234 What Street", city: "Springfield", state: "IN", zip: "12345")
+    shelter = Shelter.create(name: "Gimme Shelter", address: "1234 What Street", city: "Springfield", state: "IN", zip: "12345")
 
     title = "Superb Owl!"
     rating = 5

@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'pet can only be favorited once' do
   it 'can only favorite a pet one time' do
-    shelter = Shelter.create!(name: 'Old Dog Haven',
+    shelter = Shelter.create(name: 'Old Dog Haven',
                                address: '166 Main St',
                                city: 'Denver',
                                state: 'CO',
                                zip: '80208')
 
-    pet = Pet.create!(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
+    pet = Pet.create(image: 'https://i.ytimg.com/vi/2xZsXlSj-ts/maxresdefault.jpg',
                      name: 'Maggie',
                      description: 'A thoughtful sentient being',
                      age: '2 years',
