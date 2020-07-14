@@ -5,7 +5,7 @@
 <p>Sex: <%= @pet.sex %></p>
 <p>Shelter: <%= @pet.shelter.name %></p>
 <p>Adoption Status: <%= @pet.adoptable %></p>
-<% if @pet.adoptable == "pending" %>
+<% if !@pet.adoptable? %>
   <p>On hold for: <%= @applicant.pop.name %></p>
 <% end %>
 <ul>
