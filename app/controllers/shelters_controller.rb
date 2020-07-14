@@ -26,7 +26,7 @@ class SheltersController < ApplicationController
     end
     pets = Pet.all.where(shelter_id: @shelter.id)
     apps = pets.map { |pet| ApplicationPet.where(pet_id: pet.id).pluck(:application_id) }
-    @app_count = apps.uniq.count
+    @app_count = apps.flatten.uniq.count
   end
 
   def edit
