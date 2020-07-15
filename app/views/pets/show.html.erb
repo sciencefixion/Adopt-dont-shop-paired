@@ -3,10 +3,10 @@
 <p>Description: <%= @pet.description %></p>
 <p>Age: <%= @pet.age %> old</p>
 <p>Sex: <%= @pet.sex %></p>
-<p>Shelter: <%= @pet.shelter.name %></p>
+<p>Shelter: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %></p>
 <p>Adoption Status: <%= @pet.adoptable %></p>
 <% if !@pet.adoptable? %>
-  <p>On hold for: <%= @applicant.pop.name %></p>
+  <p>On hold for: <%= link_to "#{@applicant.last.name}", "/applications/#{@applicant.last.id}"  %></p>
 <% end %>
 <ul>
   <li><%= link_to "#{@link_title}", "/favorites/#{@pet.id}", method: @link_method %></li>

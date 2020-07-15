@@ -9,8 +9,8 @@
     <p>Description: <%= pet.description %></p>
     <p>Age: <%= pet.age %> old</p>
     <p>Sex: <%= pet.sex %></p>
-    <p>Shelter: <%= pet.shelter.name %></p>
-    <p>Adoption Status: <%= "adoptable" if pet.adoptable %></p>
+    <p>Shelter: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %></p>
+    <p>Adoption Status: <%= pet.adoptable %></p>
     <ul>
       <li><%= link_to "Update Pet", "/pets/#{pet.id}/edit"%></li>
       <li><%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %></li>

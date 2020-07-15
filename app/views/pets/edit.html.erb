@@ -1,4 +1,4 @@
-<h1>Update <%= @pet.name %>'s Information</h1>
+<h1>Update <%= link_to "#{@pet.name}", "/pets/#{@pet.id}" %>'s Information</h1>
 
 <%= form_tag "/pets/#{@pet.id}/", method: :patch do %>
   <%= label_tag :image %><br/>
