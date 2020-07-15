@@ -18,7 +18,7 @@ class PetsController < ApplicationController
     if pet.save
       redirect_to "/shelters/#{shelter.id}/pets/"
     else
-      flash[:notice] = "Pet Not Created! Required Content Missing."
+      flash[:notice] = "Could not create pet: #{pet.errors.full_messages}"
       redirect_to "/shelters/#{shelter.id}/pets/new"
     end
   end
@@ -45,7 +45,7 @@ class PetsController < ApplicationController
     if @pet.save
       redirect_to "/pets/#{@pet.id}"
     else
-      flash[:notice] = "Pet Not Updated! Required Content Missing."
+      flash[:notice] = "Could not update pet: #{@pet.errors.full_messages}"
       redirect_to "/pets/#{@pet.id}/edit"
     end
   end

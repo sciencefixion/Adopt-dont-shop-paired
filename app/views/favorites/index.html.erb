@@ -3,6 +3,12 @@
 
 <% if @favorites.nil? || @favorites.empty? %>
   <p> You have no favorited pets. </p>
+  <div class="adopt-pending">
+    <p>Pets pending adoption:</p>
+    <% @applied_list.each do |pet| %>
+      <p><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+    <% end %>
+  </div>
 <% else %>
   <% @favorites.each do |favorite_id, favorite_count| %>
   <div class="pet">

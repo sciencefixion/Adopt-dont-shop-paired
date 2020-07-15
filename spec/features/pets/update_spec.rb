@@ -51,7 +51,7 @@ RSpec.describe 'pet update page', type: :feature do
 
     click_on "Create Pet"
 
-    expect(page).to have_content("Pet Not Created! Required Content Missing.")
+    expect(page).to have_content('Could not create pet: ["Name can\'t be blank"]')
     expect(current_path).to eq("/shelters/#{@shelter.id}/pets/new")
 
     visit "/pets/#{@pet.id}/edit"
@@ -60,7 +60,7 @@ RSpec.describe 'pet update page', type: :feature do
 
     click_on "Update Pet"
 
-    expect(page).to have_content("Pet Not Updated! Required Content Missing.")
+    expect(page).to have_content('Could not update pet: ["Description can\'t be blank"]')
     expect(current_path).to eq("/pets/#{@pet.id}/edit")
   end
 end

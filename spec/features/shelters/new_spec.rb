@@ -27,6 +27,6 @@ RSpec.describe "shelter new page", type: :feature do
     fill_in 'Zip', with: '80914'
     click_on 'Create Shelter'
 
-    expect(page).to have_content("Shelter could not be created: incomplete information")
+    expect(page).to have_content('Shelter could not be created: ["Name can\'t be blank"]')
   end
 end

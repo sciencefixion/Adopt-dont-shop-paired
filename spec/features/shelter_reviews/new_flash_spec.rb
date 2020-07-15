@@ -9,7 +9,7 @@ RSpec.describe "New Shelter Review Flash Message" do
 
     click_on "Create New Shelter Review"
 
-    expect(page).to have_content("Shelter Review Not Created! Required Content Missing.")
+    expect(page).to have_content('Could not create shelter review: ["Title can\'t be blank", "Rating can\'t be blank", "Content can\'t be blank"]')
     expect(page).to have_button("Create New Shelter Review")
 
   end

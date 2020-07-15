@@ -11,7 +11,7 @@ class SheltersController < ApplicationController
     if shelter.save
       redirect_to "/shelters"
     else
-      flash[:notice] = "Shelter could not be created: incomplete information"
+      flash[:notice] = "Shelter could not be created: #{shelter.errors.full_messages}"
       redirect_to "/shelters/new"
     end
   end
@@ -36,7 +36,12 @@ class SheltersController < ApplicationController
   def update
     @shelter = Shelter.find(params[:id])
     @shelter.update(shelter_params)
-    redirect_to "/shelters/#{@shelter.id}"
+    if @shelter.save
+      redirect_to "/shelters/#{@shelter.id}"
+    else
+      flash[:notice] = "Shelter could not be updated: #{@shelter.errors.full_messages}"
+      redirect_to "/shelters/#{@shelter.id}/edit"
+    end
   end
 
   def destroy
