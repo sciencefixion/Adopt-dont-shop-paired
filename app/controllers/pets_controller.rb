@@ -32,6 +32,7 @@ class PetsController < ApplicationController
     if @favorites.nil? || @favorites.keys.include?(@pet.id.to_s) == false
       @link_title = "Add Pet to Favorites"
       @link_method = :patch
+      # redirect_to "/pets/#{@pet.id}"
     else
       @link_title = "Remove Pet from Favorites"
       @link_method = :delete
