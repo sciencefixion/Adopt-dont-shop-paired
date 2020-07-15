@@ -27,6 +27,8 @@ RSpec.describe "New Applications page" do
     visit "/pets"
     click_on "Maggie"
     click_on "Add Pet to Favorites"
+
+    visit "/pets"
     click_on "Shaggie"
     click_on "Add Pet to Favorites"
 
@@ -71,6 +73,8 @@ RSpec.describe "New Applications page" do
     visit '/pets'
     click_on "Maggie"
     click_on "Add Pet to Favorites"
+
+    visit '/pets'
     click_on "Shaggie"
     click_on "Add Pet to Favorites"
 
