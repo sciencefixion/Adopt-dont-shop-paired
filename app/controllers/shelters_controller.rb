@@ -54,11 +54,12 @@ class SheltersController < ApplicationController
         can_destroy = false if !pet.adoptable?
       end
     end
-    unless !can_destroy
+    if can_destroy
+      pets.each do |pet|
+        ApplicationPet.where(pet_id: pet.id).destroy_all
+      end
       pets.destroy_all
       reviews.destroy_all
-    end
-    if can_destroy
       @shelter.destroy
       redirect_to '/shelters'
     else
