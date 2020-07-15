@@ -10,11 +10,12 @@ class ShelterReviewsController < ApplicationController
   def create
     shelter = Shelter.find(params[:id])
     shelter_review = shelter.shelter_reviews.create(shelter_review_params)
+    shelter_review.save
     if shelter_review.save
-      redirect_to "/shelters/#{shelter.id}"
+      redirect_to "/shelters/#{shelter.id}/shelter_reviews"
     else
-      flash[:notice] = "Shelter Review Not Created! Required Content Missing."
-      render :new
+      flash[:notice] = "Could not create shelter review: #{shelter_review.errors.full_messages}"
+      redirect_to "/shelters/#{shelter.id}/shelter_reviews/new"
     end
   end
 
@@ -29,7 +30,7 @@ class ShelterReviewsController < ApplicationController
     if @shelter_review.valid?
       redirect_to "/shelters/#{@shelter_review.shelter_id}/"
     else
-      flash[:notice] = "Shelter Review Not Updated! Required Content Missing."
+      flash[:notice] = "Could not update shelter review: #{@shelter_review.errors.full_messages}"
       render :edit
     end
   end

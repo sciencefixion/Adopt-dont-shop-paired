@@ -16,7 +16,7 @@ RSpec.describe "edit shelter review flash message" do
 
     click_on "Update Shelter Review"
 
-    expect(page).to have_content("Shelter Review Not Updated! Required Content Missing.")
+    expect(page).to have_content('Could not update shelter review: ["Title can\'t be blank"]')
     expect(page).to have_button("Update Shelter Review")
   end
 end
