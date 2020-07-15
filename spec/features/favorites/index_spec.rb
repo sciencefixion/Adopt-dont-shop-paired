@@ -25,14 +25,22 @@ RSpec.describe "Favorites index page" do
 
     click_on "Maggie"
     click_on "Add Pet to Favorites"
+    # expect(current_path).to eq("/pets/#{@pet_1.id}")
+
+    visit '/pets'
 
     click_on "Shaggie"
     click_on "Add Pet to Favorites"
+    # expect(current_path).to eq("/pets/#{@pet_2.id}")
 
     visit '/favorites'
 
     expect(page).to have_content(@pet_1.name)
+    expect(page).to have_link("Remove #{@pet_1.name} from Favorites")
+
     expect(page).to have_content(@pet_2.name)
+    expect(page).to have_link("Remove #{@pet_1.name} from Favorites")
+
 
   end
   it "shows text saying No Favorites if favorties is empty" do
@@ -46,6 +54,8 @@ RSpec.describe "Favorites index page" do
     click_on "Maggie"
     click_on "Add Pet to Favorites"
 
+    visit '/pets'
+
     click_on "Shaggie"
     click_on "Add Pet to Favorites"
 
@@ -55,7 +65,6 @@ RSpec.describe "Favorites index page" do
     click_on "Remove All Favorited Pets"
 
     expect(current_path).to eq("/favorites")
-    # save_and_open_page
     expect(page).to have_content("You have no favorited pets.")
     expect(page).to have_content("Favorite Pets: 0")
   end

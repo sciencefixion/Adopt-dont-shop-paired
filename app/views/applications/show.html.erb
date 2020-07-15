@@ -8,6 +8,7 @@
 <p><%= @application.description %></p>
 
 <% @pets.each do |pet| %>
+  <%= link_to "#{pet.name}'s Information", "/pets/#{pet.id}" %>
   <% if pet.adoptable? %>
     <p><%= link_to "Approve Application for #{pet.name}", "/applicationpets/#{pet.id}", method: :patch %></p>
   <% else %>

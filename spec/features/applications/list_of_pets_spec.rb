@@ -23,13 +23,16 @@ RSpec.describe "New Applications page" do
 
   it 'can apply to adopt pets from the favorites list' do
     visit '/pets'
+
     click_on "Maggie"
     click_on "Add Pet to Favorites"
+
+    visit '/pets'
+
     click_on "Shaggie"
     click_on "Add Pet to Favorites"
 
     visit '/favorites'
-
     click_on "Apply to Adopt Pet(s)"
 
     check("pet_ids[]", match: :first)

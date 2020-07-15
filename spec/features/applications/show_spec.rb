@@ -41,6 +41,8 @@ RSpec.describe 'Application show page', type: :feature do
     expect(page).to have_content("#{@application.state}")
     expect(page).to have_content("#{@application.zip}")
     expect(page).to have_content("#{@application.phone_number}")
+    expect(page).to have_content("#{@pet_1.name}'s Information")
+
   end
   it 'can approve an application for a pet' do
     visit "/applications/#{@application.id}"

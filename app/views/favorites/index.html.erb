@@ -14,6 +14,7 @@
   <div class="pet">
     <% pet = Pet.find(favorite_id) %>
     <img src=<%= pet.image %> alt=<%= pet.name %></img>
+    <%= link_to "Remove #{pet.name} from Favorites", "/favorites/#{pet.id}", method: :delete %>
     <h3><a href="/pets/<%= pet.id %>/"><%= pet.name %></a></h3>
   </div>
   <% end %>
