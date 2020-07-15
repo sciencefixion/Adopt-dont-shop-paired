@@ -12,7 +12,7 @@ class ShelterReviewsController < ApplicationController
     shelter_review = shelter.shelter_reviews.create(shelter_review_params)
     shelter_review.save
     if shelter_review.save
-      redirect_to "/shelters/#{shelter.id}/shelter_reviews"
+      redirect_to "/shelters/#{shelter.id}"
     else
       flash[:notice] = "Could not create shelter review: #{shelter_review.errors.full_messages}"
       redirect_to "/shelters/#{shelter.id}/shelter_reviews/new"
